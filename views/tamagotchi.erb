@@ -1,0 +1,38 @@
+<div class="well">
+  <h1><%= @chosen_name %></h1>
+  <img id="egg" src="../img/<%= @@image %>" >
+  <p><%= @time %></p>
+  <form action='/stats' method='post'>
+    <button type='submit' class='btn btn-primary' id='stats'>Check stats</button>
+  </form>
+  <div class="row">
+    <div class="col-md-4">
+      <form action='/sleep' method='post'>
+        <button type='submit' class='btn btn-primary' id='sleep'>Go to sleep</button>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <form action='/feed' method='post'>
+        <button type='submit' class='btn btn-primary' id='feed'>Feed</button>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <form action='/play' method='post'>
+        <button type='submit' class='btn btn-primary' id='play'>Play</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="well">
+  <div class="row">
+    <div class="col-md-4">
+      Sleep level: <%= @@pet.sleep_level %>
+    </div>
+    <div class="col-md-4">
+      Food level: <%= @@pet.food_level %>
+    </div>
+    <div class="col-md-4">
+      Activity level: <%= @@pet.activity_level %>
+    </div>
+  </div>
+</div>
